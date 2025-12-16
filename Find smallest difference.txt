@@ -1,0 +1,23 @@
+arr = [1, 3, 4, 7, 10]
+arr.sort()
+finalP1 = 0
+finalP2 = 1
+p1 = 0
+p2 = 1
+
+if len(arr) > 1:
+    finalDiff = arr[p2] - arr[p1]
+    while p2 < len(arr):
+        diff = arr[p2] - arr[p1]
+        if diff < finalDiff:
+            finalDiff = diff
+            finalP1 = p1
+            finalP2 = p2
+        p1 += 1
+        p2 += 1
+
+    print("(" + str(arr[finalP1]) + ", " + str(arr[finalP2]) + ")")
+    print("The difference is: " + str(finalDiff))
+
+else:
+    print("Array is too small.")
