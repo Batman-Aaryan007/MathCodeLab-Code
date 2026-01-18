@@ -1,0 +1,28 @@
+money = 30
+prices = [12, 10, 8, 7, 6, 5]
+book = 0
+prices.sort()
+for i in prices:
+    if money >= i:
+        money -= i
+        book += 1
+    else:
+        break
+print(book)
+
+#-------------------------------------
+
+money = 20
+prices = [3, 5, 7, 2, 4]
+prices.sort(reverse = True)
+# 7, 5, 4, 3, 2
+toys = 0
+for i in prices:
+    if money >= i:
+        money -= i
+        toys += 1
+    else:
+        break
+print("You bought " + str(toys))
+
+
