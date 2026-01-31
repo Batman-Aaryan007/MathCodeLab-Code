@@ -1,0 +1,15 @@
+weights = [2, 1, 4, 3, 5]
+weights.sort()
+print(weights)
+items = []
+weightAllowed = 10
+sumNow = 0
+i = 0
+for i in range(len(weights)):
+    if (sumNow + weights[i]) > 10:
+        break
+    sumNow = sumNow + weights[i]
+    items.append(weights[i])
+    
+print(str(len(items)) + " items chosen with weights of: " + str(items))
+print("They add up to: " + str(sumNow))
